@@ -1,6 +1,7 @@
 Flask
 transformers
-tensorflow
+tensorflow>=2.0
+
 
 flask-cors  # If you need cross-origin requests support
 gunicorn  # For production server (recommended for Flask apps)
