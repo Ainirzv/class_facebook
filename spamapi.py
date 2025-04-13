@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from transformers import pipeline
-
+import os
 app = Flask(__name__)
 
 # Initialize zero-shot classification pipeline
@@ -24,6 +24,6 @@ def classify_text():
     top_label = result['labels'][0]
     
     return jsonify({"label": top_label})
-
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
