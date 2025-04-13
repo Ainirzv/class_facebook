@@ -2,4 +2,5 @@ Flask
 transformers==4.11.3  # You can specify this version if newer versions cause issues
 flask-cors  # If you need cross-origin requests support
 gunicorn  # For production server (recommended for Flask apps)
-tokenizers==0.10.3  # If you're facing issues with compiling tokenizers from source
+tokenizers==0.9.4
+
